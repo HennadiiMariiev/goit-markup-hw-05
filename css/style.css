@@ -585,6 +585,8 @@
     width: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
+
+    outline: 1px solid var(--border-color);
   }
   
   .examples-list-item .link {
@@ -620,9 +622,6 @@
   
   .example-description {
     padding: 20px 24px 20px;
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    border-left: 1px solid var(--border-color);
   }
   
   .example-header {
