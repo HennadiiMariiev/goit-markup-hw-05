@@ -45,6 +45,17 @@
   li {
     list-style-type: none;
   }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  li {
+    margin:0;
+    padding: 0;
+  }
+
   /* ========= END GLOBAL ==========*/
   
   /* ============ HIDDEN ELEMENTS ============ */
@@ -131,10 +142,6 @@
     fill: currentColor;
   }
   
-  .link-icon:hover {
-    fill: var(--accent-color);
-  }
-  
   .icon-box {
     display: flex;
     align-items: center;
@@ -150,15 +157,10 @@
   .qualities-icon {
     width: 70px;
     height: 70px;
-    margin: 0;
-    padding: 0;
   }
   
   .client-icon {
-    margin: 0;
-    padding: 0;
     height: 100%;
-    vertical-align: middle;
   }
   
   .social-link-icon {
@@ -363,7 +365,6 @@
   .social-list,
   .client-item  {
     display: flex;
-    padding: 0;
   }
   
   .small-header,
@@ -375,16 +376,10 @@
     word-wrap: inherit;
   }
   
-  .social-list {
-    padding: 0;
-    margin: 0;
-  }
-  
   .social-list-item {
     width: 44px;
     height: 44px;
-    margin: 0 10px 0 0;
-    padding: 0;
+    margin-right: 10px;
   }
   
   .social-list-item:last-child {
@@ -423,8 +418,9 @@
     font-size: 36px;
   }
   
-  .work-section-header {
-    margin: 0 0 50px;
+  .work-section-header,
+  .team-section-header {
+    margin-bottom: 50px;
   }
   
   .work-list-item {
@@ -432,13 +428,8 @@
     margin-right: 30px;
   }
   
-  .team-section-header {
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-  
   .team-list-header {
-    margin: 0 0 10px;
+    margin-bottom: 10px;
   
     font-weight: 500;
     font-size: 16px;
@@ -446,8 +437,6 @@
   }
   
   .section-text {
-    margin: 0;
-  
     font-weight: 400;
     font-size: inherit;
     line-height: 1.7;
@@ -464,15 +453,11 @@
   
     color: var(--inactive-color);
   }
-  
-  .address-list,
-  .footer .logo {
-    padding: 0;
-  }
-  
+
   .footer .logo {
     display: inline-block;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
+    padding: 0;
   }
   
   .address {
@@ -481,7 +466,7 @@
   }
   
   .address-text {
-    margin: 0 0 9px;
+    margin-bottom: 9px;
   }
   
   .address-list-item:not(:last-child) {
@@ -494,7 +479,7 @@
   
   .join-text {
     display: inline-block;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
   
     font-weight: 700;
     font-size: inherit;
@@ -572,7 +557,6 @@
   }
   
   .examples-buttons-list {
-    margin-top: 0;
     margin-bottom: 50px;
     justify-content: center;
   }
@@ -604,7 +588,7 @@
 
   .examples-list-item .link:hover .overlay-hidden-box,
   .examples-list-item .link:focus .overlay-hidden-box{
-    transform: translateY(-295px);
+    transform: translateY(0px);
   }
   
   .examples-section .button {
@@ -625,7 +609,7 @@
   }
   
   .example-header {
-    margin: 0 0 4px;
+    margin-bottom: 4px;
   
     font-size: 18px;
     font-weight: 700;
@@ -715,9 +699,6 @@
 }
 
 .overflow-text {
-  margin: 0;
-  padding: 0;
-
   font-weight: 700;
   line-height: 1.142em;
   text-align: center;
@@ -727,7 +708,7 @@
 }
 
 .overlay-hidden-box {
-  top: 295px;
+  top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
@@ -738,13 +719,13 @@
 
   background: var(--overlay-box-color);
 
-  transition: transform var(--animation-time) var(--cubic-function-variable);
+  transform: translateY(101%);
+  transition: z-index 1ms linear 1ms, transform var(--animation-time) var(--cubic-function-variable) 2ms,
+
 }
 
 .overlay-hidden-text {
   width: 322px;
-  margin: 0;
-  padding: 0;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.555em;
