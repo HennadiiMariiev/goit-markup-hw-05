@@ -52,7 +52,7 @@
   p,
   ul,
   li {
-    margin:0;
+    margin: 0;
     padding: 0;
   }
 
@@ -271,18 +271,6 @@
     color: var(--accent-color);
   }
   
-  .clients-list,
-  .contact-list, 
-  .navbar-list,
-  .section-list,
-  .example-text,
-  .small-header,
-  .work-list,
-  .team-list-text,
-  .address-list {
-    margin: 0;
-  } 
-  
   .contact-list, 
   .navbar-list {
     font-weight: 500;
@@ -291,14 +279,6 @@
   
   .contact-list {
     margin-left: auto;
-  }
-  
-  .examples-list,
-  .team-list {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
   }
   
   .examples-list {
@@ -312,10 +292,6 @@
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-  }
-  
-  .team-list-item:not(:last-child) {
-    margin-right: 30px;
   }
   
   .contact-list-item:not(:last-child),
@@ -363,7 +339,9 @@
   .section-list,
   .examples-buttons-list,
   .social-list,
-  .client-item  {
+  .client-item,
+  .examples-list,
+  .team-list  {
     display: flex;
   }
   
@@ -395,6 +373,8 @@
     width: calc((100% - 3 * 30px) / 4 );
   }
   
+  .work-list-item,
+  .team-list-item:not(:last-child),
   .client-item:not(:last-child),
   .section-list-item:not(:last-child){
     margin-right: 30px;
@@ -408,8 +388,7 @@
     margin-bottom: 10px;
     font-weight: 700;
     font-size: inherit;
-    text-transform: uppercase;
-    word-wrap: inherit;
+    text-transform: uppercase;;
   }
   
   .work-section-header,
@@ -425,7 +404,6 @@
   
   .work-list-item {
     width: calc((100% - 2 * 30px) / 3);
-    margin-right: 30px;
   }
   
   .team-list-header {
@@ -433,14 +411,12 @@
   
     font-weight: 500;
     font-size: 16px;
-    word-wrap: inherit;
   }
   
   .section-text {
     font-weight: 400;
     font-size: inherit;
     line-height: 1.7;
-    word-wrap: inherit;
   
     color: var(--inactive-color);
   }
@@ -649,8 +625,8 @@
 .navbar-list .accent-text:after {
   content: '';
   width: 100%;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   border: 2px solid var(--accent-color);
   background-color: var(--accent-color);
   border-radius: 2px;
@@ -687,8 +663,8 @@
 }
 
 .overflow-box {
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 70px;
   display: flex;
@@ -709,7 +685,7 @@
 
 .overlay-hidden-box {
   bottom: -295px;
-  left: 0px;
+  left: 0;
   width: 100%;
   height: 100%;
   
@@ -740,8 +716,8 @@
 
 .background-box {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -794,4 +770,3 @@
 
   cursor: pointer;
 }
-
